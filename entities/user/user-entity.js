@@ -7,8 +7,7 @@ export class UserEntity {
     this.name = user.name;
     this.email = user.email;
     this.password = user.password;
-    this.image = user.image;
-    this.palettes = user.palettes ?? [];
+    this.likes = user.likes ?? [];
   }
 
   validateEmail() {
@@ -29,8 +28,7 @@ export class UserEntity {
       name: this.name,
       email: this.email,
       password: this.password,
-      image: this.image,
-      palettes: this.palettes,
+      likes: this.likes,
     };
   }
 }

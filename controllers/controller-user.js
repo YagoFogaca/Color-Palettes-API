@@ -27,7 +27,7 @@ export class ControllerUser {
   async login(req, res) {
     try {
       const user = await this.service.login(req.body);
-      const token = this.jwt.Sign(user);
+      const token = this.jwt.Sing(user);
       res.status(200).send({ token: token, user: user });
     } catch (err) {
       console.log(err);

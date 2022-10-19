@@ -1,5 +1,5 @@
 export class CreateUsecase {
-  constrcutor(repository, entity, bcrypt) {
+  constructor(repository, entity, bcrypt) {
     this.repository = repository;
     this.entity = entity;
     this.bcrypt = bcrypt;

@@ -1,4 +1,4 @@
-import { userModel } from '../mongo/schemas/user-schema';
+import { userModel } from '../mongo/schemas/user-schema.js';
 
 export class UserRepository {
   static async login(email_user) {

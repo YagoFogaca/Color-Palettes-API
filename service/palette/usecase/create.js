@@ -5,7 +5,7 @@ export class CreateUsecasePalette {
   }
 
   async execute(palette) {
-    const entityPalette = new entity(palette);
+    const entityPalette = new this.entity(palette);
     const palletCreation = await this.repository.create(
       entityPalette.printPalette(),
     );

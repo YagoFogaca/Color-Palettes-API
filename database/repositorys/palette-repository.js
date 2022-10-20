@@ -1,4 +1,4 @@
-import { paletteModel } from '../mongo/schemas/palette-schema';
+import { paletteModel } from '../mongo/schemas/palette-schema.js';
 
 export class PaletteRepository {
   static async getAll() {
@@ -6,7 +6,7 @@ export class PaletteRepository {
   }
 
   static async getByIdUser(id_user) {
-    return await paletteModel.findOne({ id_user: id_user });
+    return await paletteModel.find({ id_user: id_user });
   }
 
   static async getById(id_palette) {

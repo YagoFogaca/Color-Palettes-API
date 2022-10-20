@@ -7,7 +7,6 @@ import { GetByIdUserUsecasePalette } from '../service/palette/usecase/getByIdUse
 import { UpdateUsecasePalette } from '../service/palette/usecase/update.js';
 import { ServicePalette } from '../service/palette/service-palette.js';
 import { ControllerPalette } from '../controllers/controller-palette.js';
-import { ServicePalette } from '../service/palette/service-palette.js';
 import { RoutePalette } from '../routes/routes-palettes.js';
 import { PaletteEntity } from '../entities/palette/palette.entity.js';
 

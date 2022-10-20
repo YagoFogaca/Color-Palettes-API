@@ -26,7 +26,7 @@ export class ControllerPalette {
   async getAll(req, res) {
     try {
       const palettes = await this.service.getAll();
-      res.send(200).send(palettes);
+      res.status(200).send(palettes);
     } catch (err) {
       console.log(err);
       res.status(404).send(err.message);

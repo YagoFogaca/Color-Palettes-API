@@ -10,6 +10,7 @@ import { UpdateUsecase } from '../service/user/usecase/update.js';
 import { ServiceUser } from '../service/user/service-user.js';
 import { ControllerUser } from '../controllers/controller-user.js';
 import { RouteUser } from '../routes/routes-user.js';
+import { MiddlewareAuthorization } from '../middleware/authorization.js';
 
 export function factoryUser(router) {
   const createUsecase = new CreateUsecase(UserRepository, UserEntity, Bcrypt);

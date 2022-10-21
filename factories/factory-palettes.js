@@ -9,6 +9,7 @@ import { ServicePalette } from '../service/palette/service-palette.js';
 import { ControllerPalette } from '../controllers/controller-palette.js';
 import { RoutePalette } from '../routes/routes-palettes.js';
 import { PaletteEntity } from '../entities/palette/palette.entity.js';
+import { MiddlewareAuthorization } from '../middleware/authorization.js';
 
 export function factoryPalette(router) {
   const getAllUsecasePalette = new GetAllUsecasePalette(PaletteRepository);
@@ -35,7 +36,7 @@ export function factoryPalette(router) {
   );
 
   const controller = new ControllerPalette(service);
-  const routes = new RoutePalette(controller, router);
+  const routes = new RoutePalette(controller, router, MiddlewareAuthorization);
 
   return routes;
 }

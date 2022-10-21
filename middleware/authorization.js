@@ -8,7 +8,7 @@ export class MiddlewareAuthorization {
         throw new Error('Authorization token not provided');
       }
 
-      Jwt.Verify(token.splice(7));
+      Jwt.Verify(token.slice(7));
 
       next();
     } catch (err) {

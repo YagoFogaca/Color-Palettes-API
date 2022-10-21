@@ -26,7 +26,11 @@ export function factoryUser(router) {
     updateUsecase,
   );
   const controllerUser = new ControllerUser(serviceUser, Jwt);
-  const routeUser = new RouteUser(controllerUser, router);
+  const routeUser = new RouteUser(
+    controllerUser,
+    router,
+    MiddlewareAuthorization,
+  );
 
   return routeUser;
 }

@@ -20,5 +20,5 @@ app.use('/user', user.Routes());
 app.use('/palette', palette.Routes());
 
 app.listen(port, () => {
-  console.log('Servidor rodando em: http://localhost:3000');
+  console.log('Server started');
 });

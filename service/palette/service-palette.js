@@ -5,12 +5,14 @@ export class ServicePalette {
     getAllUsecasePalette,
     getByIdUserUsecasePalette,
     updateUsecasePalette,
+    getByIdUsecasePalette,
   ) {
     this.createUsecasePalette = createUsecasePalette;
     this.deleteUsecasePalette = deleteUsecasePalette;
     this.getAllUsecasePalette = getAllUsecasePalette;
     this.getByIdUserUsecasePalette = getByIdUserUsecasePalette;
     this.updateUsecasePalette = updateUsecasePalette;
+    this.getByIdUsecasePalette = getByIdUsecasePalette;
   }
 
   async create(palette) {
@@ -27,6 +29,10 @@ export class ServicePalette {
 
   async getByIdUser(id_user) {
     return await this.getByIdUserUsecasePalette.execute(id_user);
+  }
+
+  async getById(id) {
+    return await this.getByIdUsecasePalette.execute(id);
   }
 
   async update(id_palette, palette) {

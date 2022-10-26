@@ -43,6 +43,16 @@ export class ControllerPalette {
     }
   }
 
+  async getById(req, res) {
+    try {
+      const palettesUser = await this.service.getById(req.params.id);
+      res.status(200).send(palettesUser);
+    } catch (err) {
+      console.log(err);
+      res.status(404).send(err.message);
+    }
+  }
+
   async update(req, res) {
     try {
       await this.service.update(req.params.id, req.body);

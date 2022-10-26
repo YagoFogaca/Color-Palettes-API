@@ -20,6 +20,10 @@ export class RoutePalette {
       },
     );
 
+    this.router.get('/palette/:id', (req, res) => {
+      this.controller.getById(req, res);
+    });
+
     this.router.post(
       '/create-palette',
       (req, res, next) => {

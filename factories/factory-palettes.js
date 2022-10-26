@@ -33,6 +33,7 @@ export function factoryPalette(router) {
     getAllUsecasePalette,
     getByIdUserUsecasePalette,
     updateUsecasePalette,
+    getByIdUsecasePalette,
   );
 
   const controller = new ControllerPalette(service);
